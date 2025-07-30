@@ -58,7 +58,7 @@ if uploaded_file:
             output_buffer = StringIO()  # For downloading
 
             for chunk in chunks[:3]:
-                prompt = f"Generate important questions from this text:\n\n{chunk.page_content}"
+                prompt = f"Generate 5 important questions from this text:\n\n{chunk.page_content}"
                 try:
                     response = llm.invoke(prompt)
                     if response and hasattr(response, "content"):
